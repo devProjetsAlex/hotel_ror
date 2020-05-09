@@ -39,6 +39,7 @@
       <%= f.submit %>
     </p>  
     <p>
-     <%= link_to 'Effacer', room_path(@room), method: :delete %> 
+     <%= link_to 'Effacer', room_path(@room), method: :delete, data: {confirm: "Ëtes-vous sur? "} %> 
+     <%= link_to 'Retour au chambres', rooms_path %>
     </p>
   <% end %> 

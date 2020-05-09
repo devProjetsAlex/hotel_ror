@@ -1,4 +1,7 @@
         
+<div class="album py-5 bg-light">
+  <div class="container">
+    <div class="row">
       <% @rooms.each do |room| %>
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
@@ -18,3 +21,7 @@
           </div>
         </div>   
 			<% end %>
+    </div>
+  </div>
+</div>
+<%= link_to 'Deconnexion', destroy_client_session_path, method: :delete %>
