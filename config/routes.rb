@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'accueil#index'
+  root 'rooms#index'
   devise_for :clients
   resources :rooms
   
