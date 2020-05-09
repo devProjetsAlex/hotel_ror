@@ -1,0 +1,40 @@
+<h1> Créer une nouvelle chambre </h1>
+
+  <% if @room.errors.any? %>
+    <h2> The following errors prevented the room from being saved </h2>
+    <ul>
+    <% @room.errors.full_messages.each do |msg| %>
+      <li>  <%= msg %> </li>
+    <% end %>
+    </ul>
+  <% end %>
+
+  <%= form_with scope: :room, url: rooms_path, local: true do |f| %>
+	  <p>
+      <%= f.label :room_name %> <br/>
+     <%= f.text_field :room_name %>
+    </p>
+ 	  <p>
+      <%= f.label :room_vue %> <br/>
+      <%= f.text_field :room_vue %>
+    </p>
+
+ 	  <p>
+      <%= f.label :room_description %> <br/>
+      <%= f.text_area :room_description %>
+    </p>
+
+
+ 	  <p>
+      <%= f.label :room_price %> <br/>
+      <%= f.text_field :room_price %>
+    </p>
+
+ 	  <p>
+      <%= f.label :room_vacancy %> <br/>
+      <%= f.text_field :room_vacancy %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>  
+  <% end %> 
