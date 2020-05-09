@@ -1,7 +1,7 @@
 class Room < ApplicationRecord
-    validate :room_name, presence:true, length: {minimum:3, maximum:100}
-    validate :room_description, presence:true
-    validate :room_vue, presence:true
-    validate :room_price, presence:true
-    validate :room_vacancy, presence:true
+    validates :room_name, presence:true, length: {minimum:3, maximum:100}
+    validates :room_description, presence:true
+    validates :room_vue, presence:true
+    validates :room_price, presence:true
+    validates :room_vacancy, presence:true
 end
