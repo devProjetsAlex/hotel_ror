@@ -1,0 +1,39 @@
+  <% if @reservation.errors.any? %>
+    <h2> The following errors prevented the room from being saved </h2>
+    <ul>
+    <% @reservation.errors.full_messages.each do |msg| %>
+      <li>  <%= msg %> </li>
+    <% end %>
+    </ul>
+  <% end %>
+
+<%= form_with(model: @reservation,local: true) do |f| %>
+	<p>
+      <%= f.label :date %> <br/>
+      <%= f.date_field :date %>
+    </p>
+ 	  <p>
+      <%= f.label :room %> <br/>
+      <%= f.number_field :room %>
+    </p>
+
+ 	<p>
+      <%= f.label :client_id %> <br/>
+      <%= f.text_field :client_id %>
+    </p>
+
+
+ 	<p>
+      <%= f.label :client_email%> <br/>
+      <%= f.text_field :client_email %>
+    </p>
+
+ 	<p>
+      <%= f.label :client_request %> <br/>
+      <%= f.text_field :client_request %>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>  
+  <% end %> 

@@ -1,0 +1,27 @@
+<p>Liste des réservation </p>
+
+<table>
+  <thead>
+      <tr>
+				<th> Date </th>
+				<th> Chambre </th>
+				<th> Nom du client </th>
+				<th> Email </th>
+				<th> Demande spécial </th>
+
+      </tr>
+  </thead>
+
+	
+	<tbody>
+		<% @reservations.each do |reservation| %>
+			<tr>
+				<td><%= reservation.date %> </td>
+				<td><%= reservation.room %> </td>
+				<td><%= reservation.client_id %> </td>
+				<td><%= reservation.client_email %> </td>
+				<td><%= reservation.client_request %> </td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
