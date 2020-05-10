@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2020-05-10 12:59:00
+  room: 1
+  client_id: MyString
+  client_email: MyString
+  client_request: MyString
+
+two:
+  date: 2020-05-10 12:59:00
+  room: 1
+  client_id: MyString
+  client_email: MyString
+  client_request: MyString
