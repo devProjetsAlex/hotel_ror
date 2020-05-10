@@ -6,3 +6,6 @@
  Nom du client: <%= @reservation.client_id %><br/>
 Email du client: <%= @reservation.client_email %><br/>
 Demande Spécial: <%= @reservation.client_request %><br/>
+
+<%= link_to 'Modifié la réservation', edit_reservation_path(@reservation) %>
+<%= link_to 'Retour aux réservations', reservations_path%>

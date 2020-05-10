@@ -8,7 +8,7 @@
 				<th> Nom du client </th>
 				<th> Email </th>
 				<th> Demande spécial </th>
-
+				<th> Action </th>
       </tr>
   </thead>
 
@@ -21,6 +21,10 @@
 				<td><%= reservation.client_id %> </td>
 				<td><%= reservation.client_email %> </td>
 				<td><%= reservation.client_request %> </td>
+				<td>
+					<%= link_to 'Voir la réservation', reservation_path(reservation)%>
+					<%= link_to 'Annulé la réservation', reservation_path(reservation), method: :delete %>
+				</td>
 			</tr>
 		<% end %>
 	</tbody>
