@@ -12,10 +12,7 @@
     
   <body  class="d-flex flex-column col-12">
       <%= render 'layouts/navigation'%>
-      <% flash.each do |room_name, msg| %>
-        <%= msg %>
-      <% end %>
-   
+      
      <%= render 'layouts/messages' %>
      <%= render 'layouts/footer'%>
   </body>
