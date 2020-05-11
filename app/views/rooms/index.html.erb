@@ -14,7 +14,7 @@
                   <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to 'Réserver', new_reservation_path %></button>
                   <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to 'Modifier', edit_room_path(room) %></button>
                 </div>
-               <small class="text-muted"><%= room.room_description %> <%= room.room_vue %></small>
+               <small class="text-muted"><%= room.room_description %> <br/> <%= room.room_vue %></small>
               </div>
                <small class="text-muted"><%= room.room_vacancy %></small>
             </div>
@@ -24,6 +24,6 @@
     </div>
   </div>
 </div>
-<%= link_to 'Deconnexion', destroy_client_session_path, method: :delete %>
+
   
   

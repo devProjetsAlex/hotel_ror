@@ -8,7 +8,7 @@
                   <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to 'Réserver', new_reservation_path %></button>
                   <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to 'Retour au chambres', rooms_path %></button>
                 </div>
-               <small class="text-muted"><%= @room.room_description %> <%= @room.room_vue %></small>
+               <small class="text-muted"><%= @room.room_description %> <br/> <%= @room.room_vue %></small>
               </div>
                <small class="text-muted"><%= @room.room_vacancy %></small>
             </div>
