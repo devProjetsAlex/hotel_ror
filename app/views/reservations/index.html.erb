@@ -23,8 +23,8 @@
 				<td><%= reservation.client_id %> </td>
 				<td><%= reservation.client_email %> </td>
 				<td><%= reservation.client_request %> </td>
-				<td><button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to 'Voir la réservation', reservation_path(reservation)%> </button></td>
-				<td><button type="button" class="btn btn-sm btn-outline-danger btn-danger"><%= link_to 'Annulé la réservation', reservation_path(reservation), method: :delete, data:{confirm: "Ëtes-vous sur? "} %></button></td>
+				<td><button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to 'Voir la réservation', reservation_path(reservation), class:"text-info"%> </button></td>
+				<td><button type="button" class="btn btn-sm btn-outline-danger"><%= link_to 'Annulé la réservation', reservation_path(reservation), method: :delete, data:{confirm: "Ëtes-vous sur? "} , class:"text-danger"%></button></td>
 					<td><%= time_ago_in_words(reservation.created_at) %></td>
 			</tr>
 		<% end %>
