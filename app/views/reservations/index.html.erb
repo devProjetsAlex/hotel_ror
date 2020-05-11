@@ -22,10 +22,11 @@
 				<td><%= reservation.client_email %> </td>
 				<td><%= reservation.client_request %> </td>
 				<td>
-					<%= link_to 'Voir la réservation', reservation_path(reservation)%>
-					<%= link_to 'Annulé la réservation', reservation_path(reservation), method: :delete %>
+					<button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to 'Voir la réservation', reservation_path(reservation)%> </button>
+					<button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to 'Annulé la réservation', reservation_path(reservation), method: :delete, data:{confirm: "Ëtes-vous sur? "} %></button>
 				</td>
 			</tr>
 		<% end %>
-	</tbody>
+	</tbody>	
 </table>
+<button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to 'Administration', admin_index_path %> </button>

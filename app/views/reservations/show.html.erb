@@ -7,5 +7,6 @@
 Email du client: <%= @reservation.client_email %><br/>
 Demande Spécial: <%= @reservation.client_request %><br/>
 
-<%= link_to 'Modifié la réservation', edit_reservation_path(@reservation) %>
-<%= link_to 'Retour aux réservations', reservations_path%>
+<button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to 'Modifié la réservation', edit_reservation_path(@reservation) %></button>
+<button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to 'Retour aux réservations', reservations_path%></button>
+<button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to 'Administration', admin_index_path %> </button>

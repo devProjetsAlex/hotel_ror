@@ -1,7 +1,9 @@
 class ReservationsController < ApplicationController
 
-  def show
-        @reservation = Reservation.find(params[:id])
+  before_action :set_reservation, only: [:show, :edit, :update,:destroy]
+
+    def show
+       
     end
 
     def index
@@ -13,12 +15,12 @@ class ReservationsController < ApplicationController
     end
 
     def edit
-      @reservation = Reservation.find(params[:id])
+      
     end
 
 
     def create
-      @reservation = Reservation.new(params.require(:reservation).permit(:date, :room, :client_id, :client_email, :client_request))
+      @reservation = Reservation.new(reservation_params)
       if @reservation.save
         flash[:notice] = "La réservation a été enregistrée."
         redirect_to @reservation
@@ -28,8 +30,7 @@ class ReservationsController < ApplicationController
     end 
 
     def update
-      @reservation = Reservation.find(params[:id])
-      if @reservation.update(params.require(:reservation).permit(:date, :room, :client_id, :client_email, :client_request))
+      if @reservation.update(reservation_params)
         flash[:notice]= "La réservation a été modifié"
         redirect_to @reservation
       else
@@ -38,9 +39,16 @@ class ReservationsController < ApplicationController
     end
 
     def destroy
-      @reservation = Reservation.find(params[:id])
       @reservation.destroy
       redirect_to reservations_path
     end
-    
+    private
+    def set_reservation
+    @reservation = Reservation.find(params[:id])
+    end
+
+    def reservation_params
+      params.require(:reservation).permit(:date, :room, :client_id, :client_email, :client_request)
+    end
+
 end

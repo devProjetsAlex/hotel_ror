@@ -8,13 +8,16 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  <body>
+
+    
+  <body  class="d-flex flex-column col-12">
+      <%= render 'layouts/navigation'%>
       <% flash.each do |room_name, msg| %>
         <%= msg %>
       <% end %>
-      <%= render 'layouts/navigation'%>
-   <div class="container">
+   
      <%= render 'layouts/messages' %>
-   </div>
+     <%= render 'layouts/footer'%>
   </body>
+  
 </html>
